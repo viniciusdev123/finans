@@ -1,0 +1,13 @@
+#home {
+    background: #ffc107;
+    color: white;
+}
+
+.caixa {
+    padding: 60px 0px;
+    border: 1px solid #e5e5e5;
+}
+
+footer p a { /*Quero selecionar o link que está dentro de footer e dentro do parágrafo*/
+    margin: 5px 15px;
+}

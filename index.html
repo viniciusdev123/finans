@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+    <!--Estilo customizado (css)-->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <title>Finans - finanças pessoais</title>
+  </head>
+
+  <body>
+
+    <!--sempre utilize a tag header para criar o topo, pois desta forma, o leitor de acessibilidade vai saber identificar que isso é o topo.-->
+    <header> <!--início cabeçalho-->
+      <!--O container deve vir sempre após a definição da navbar, pois se o mesmo vir antes, a barra de navegação vai ficar parecendo uma folha de sufite, ou seja, vai ficar tudo centralizado, ficando assim, metade da tela em branco.-->
+      <div class="navbar navbar-expand-sm navbar-light bg-warning"> <!--navbar é uma formatação específica para barra de navegação / navbar-expand-sm -> 'expand' vem de expandir, ou seja, está classe vai permitir que em telas do tamanho 'sm', a barra de navegação fique oculta, mostrando apenas o menu hamburguer, que no caso vai aparecer somente quando a tela for do tamanho específicado, ou seja, 'sm'. OBS: CASO EU NÃO INFORME O NAVBAR-EXPAND, O BOTÃO HAMBURGUER VAI APARECER EM TODOS OS TAMANHOS DE TELA, por isso é importante informar. // navbar-light -> cores dos textos // bg-warning -> background da barra-->
+        <div class="container"> <!--os itens devem sempre estar dentro de um container-->
+
+          <a href="#" class="navbar-brand"> <!--sempre que tiver uma logo, use a tag navbar-brand, que significa "logo da barra de navegação"-->
+            <img src="img/logo.png" width="142">
+          </a>
+
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal"> <!--navbar-toggler -> barra de navegação que ficará oculta/alternada / data-toggle é utilizado pelo bootstrap para fazer a exibição dos itens, ou seja, é ele que vai permitir que você clique e o item fique alternado. VOCÊ DEFINE O TIPO DE AÇÃO QUE QUER APLICAR NO DATA-TOGGLE. Neste caso, 'collapse', vai fazer com que  os itens do menu fiquem ocultos (apenas quando for o tamanho de tela específicado no início) e apareçam apenas quando pressionar o menu hamburguer( vai aparecer apenas no tamanho informado logo acima na tag 'nav'(navbar-expand-sm) ), ao clicar em cima do botão, os itens vão ficar todos visíveis // no data-target, você vai colocar uma o que você quer deseja exibir quando pressionar o menu hamburguer, com uma id específica-->
+            <span class="navbar-toggler-icon"></span> <!--vai criar o ícone do menu hamburguer / está dentro da tag span, pois desta forma, o ícone vai ficar na mesma linha, ou seja, de forma inline.-->
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav-principal"> <!--'collapse' vai fazer com que o botão hamburguer fique oculto, aparecendo apenas quando a tela for do tamanho citado acima. / navbar-collapse vai aplicar uma formatação para que o botão fique fixo enquanto é pressionado, e  apenas os links se movam  / id="nav-principal" -> vai indicar que esses são os itens que desejo exibir quando eu alternar o botão hamburguer. Claro que o menu hamburguer, junto com esses itens, vão aparecer somente quando a tela ficar do tamanho específicado acima (navbar-expand-TAMANHO)-->
+            <ul class="navbar-nav ml-auto"> <!--navbar-nav (navegação dentro da barra de navegação) -> é uma formatação específica para navegação, e deve sempre ser usado dentro das ul vai. Está classe vai permitir que um link fique ao lado do outro, removendo assim o list-style (bolinhas), colocando espaçamento, float, etc. / ml-auto - margin-left automática-->
+              <li class="nav-item"> <!--todas as li e links dentro de uma navbar devem ter essas classes presentes.-->
+                <a href="" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Recursos</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Benefícios</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Preços</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="btn btn-outline-light ml-4">Entrar</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </header> <!--fim cabeçalho-->
+
+    <!--sempre que for criar uma nova seção, utilize a tag section e uma id específica para caso você queira formatar uma section via css.-->
+    <section id="home"> <!--início seção home // coloquei um id para caso eu queira formatar está section de forma indivídual no css-->
+
+      <div class="container">
+
+        <div class="row">
+          <!--col-md-6 vai fazer com que o conteúdo oculte a metade da grid, que no caso tem 12 colunas / o d-flex vai tornar o display flexível, permitindo assim, que consigamos alinhar itens dentro da row-->
+          <div class="col-md-6 d-flex"> <!--textos da seção-->
+            <div class="align-self-center"> <!--Vai alinhar o conteúdo de forma INDIVIDUAL(self), na vertical.-->
+              <h1 class="display-4">Suas contas, descomplicadas</h1> <!-- display-4 -> Vai mudar a formatação das letras-->
+              <p>
+                Usado por mais de 1 milhão de pessoas, o Finans é uma ferramenta online que vai facilitar sua vida financeira.
+              </p>
+
+              <form class="mt-4 mb-4"> <!--margin top / margin-bottom-->
+                <div class="input-group input-group-lg"> <!--"input-group" -> está classe vai fazer com que todos os itens presentes nela, se tornem juntos em uma única linha. // input-group-lg -> vai deixar os elementos de formulários, maiores-->
+                  <input type="text" placeholder="Seu e-mail" class="form-control"> <!--class form-control -> vai formatar a linha do input para que ele fique do tamanho do container -> deve ser aplicado na tag input.-->
+                  <div class="input-group-append"> <!--append = exibir depois, ou seja, vai fazer com que os itens presentes dentro dessa div, apareçam logo após, no final da linha, e também, vai formatar para que fique do mesmo tamanho do input-->
+                    <button type="button" class="btn btn-primary">Cadastre-se</button>
+                  </div>
+                </div>
+              </form>
+
+              <p>Disponível para
+                <a href="" class="btn btn-outline-light"> <!--vai criar um botão com um ícone dentro-->
+                  <i class="fa-brands fa-google-play fa-lg"></i> <!--fontawesome-->
+                </a>
+
+                <a href="" class="btn btn-outline-light">
+                  <i class="fa-brands fa-app-store-ios fa-lg"></i>
+                </a>
+              </p>
+
+
+            </div>
+          </div> <!--fim da seção-->
+
+          <div class="col-md-6 d-none d-md-block"> <!--d-none d-md-block -> signica que: não vamos exibir a imagem, porém quando for um tamanho maior que o "md", irei exibi-la. Com isso, a visualização em dispositivos menores será muito mais agradável-->
+            <img src="img/capa-mulher.png" alt="Mulher"> <!--alt é o apelido que você deseja dar à imagem.-->
+          </div>
+
+        </div>
+
+      </div>
+ 
+    </section> <!--fim seção home-->
+
+    <!--Vale frisar que para cada novo conteúdo, é necessário criar uma section-->
+    <section class="caixa"> <!--Início seção saiba-->
+      <div class="container"> <!--O container sempre vem antes da row-->
+        <div class="row"> <!-- a nossa row, vem sempre na sequência do container-->
+          <div class="col-md-6 d-flex"> <!--vai ocupar um espaço de 6/12, ou seja, A METADE. "d-flex" vai tornar o conteúdo flexível, possibilitando assim, um alinhamento entre os itens-->
+            <div class="align-self-center"> <!--só é possível alinhar com d-flex-->
+              <h2>Saiba para onde vai o seu dinheiro</h2>
+              <p>Com o Finans, você categoriza todos os seus lançamentos. Com gráficos simples, você sabe de onde vem e para onde vai o seu dinheiro.</p>
+              <a href="" class="btn btn-primary">Veja mais</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="img/saiba.png" alt="" class="img-fluid"> <!-- class="img-fluid" -> vai criar uma imagem fluída, se adaptando assim, ao conteúdo-->
+          </div>
+        </div>
+      </div>
+    </section> <!--fim seção juros-->
+
+    <section class="caixa"> <!--Início seção juros-->
+      <div class="container"> <!--O container sempre vem antes-->
+        <div class="row"> <!-- a nossa row, vem sempre na sequência do container-->
+          <div class="col-md-6">
+            <img src="img/juros.png" alt="" class="img-fluid"> 
+          </div>
+          <div class="col-md-6 d-flex"> <!--vai ocupar um espaço de 6/12, ou seja, A METADE. "d-flex" vai tornar o conteúdo flexível, possibilitando assim, um alinhamento entre os itens-->
+            <div class="align-self-center"> <!--só é possível alinhar com d-flex, neste caso, vou alinhar o conteúdo de forma vertical(self) no centro.-->
+              <h2>Pare de pagar juros e economize</h2>
+              <p>Manter as contas em dia é sempre um problema? O Finans avisa você: receba alertas de contas a pagar e a receber!</p>
+              <a href="" class="btn btn-primary">Veja mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!--fim seção juros-->
+
+    <section class="caixa"> <!--Início seção recursos-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="img/facil.png" alt="" class="img-fluid">
+            <h4>Fácil de usar</h4>
+            <p>O finans vai além do básico e permite que você faça controles incríveis, essenciais para suas finanças. Simples como tem que ser!</p>
+          </div>
+          <div class="col-md-4">
+            <img src="img/economize.png" alt="" class="img-fluid">
+            <h4>Economize seu tempo</h4>
+            <p>Tempo é dinheiro! Em segundos, você tem tudo sobre controle e aproveite seu tempo com o que realmente importa para você!</p>
+
+          </div>
+          <div class="col-md-4">
+            <img src="img/suporte.png" alt="" class="img-fluid">
+            <h4>Suporte amigo</h4>
+            <p>Dúvidas? Perguntas? Nosso suporte super legal ajuda você! A gente tá aqui para resolver seus problemas e deixar sua vida bem mais fácil!</p>
+          </div>
+        </div>
+      </div>
+    </section> <!--fim seção recursos-->
+
+    <footer class="mt-4 mb-4"> <!--tag para rodapé-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <p>
+              <a href="">Home</a>
+              <a href="">Recursos</a>
+              <a href="">Benefícios</a>
+              <a href="">preços</a>
+            </p>
+          </div>
+          <div class="col-md-4 d-flex justify-content-end"> <!--d-flex justify-content-end -> vai tornar o container flexível, possibitando assim, mudar o alinhamento, etc. Neste caso eu estou alinhando à direita, pois é "end"-->
+            <a href="" class="btn btn-outline-dark">
+              <i class="fa-brands fa-meta"></i>
+            </a>
+            <a href="" class="btn btn-outline-dark ml-2">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a> 
+            <a href="" class="btn btn-outline-dark ml-2">
+              <i class="fa-brands fa-instagram"></i>
+            </a>    
+            <a href="" class="btn btn-outline-dark ml-2">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="" class="btn btn-outline-dark ml-2">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>    
+          </div>
+        </div>
+      </div>
+    </footer> <!--fim roodapé-->
+
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
